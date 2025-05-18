@@ -1,105 +1,163 @@
-# Scratch Clone
 
-A visual programming environment inspired by MIT Scratch, built with React and TypeScript.
+# 🧩 Scratch Clone
 
-![Scratch Clone Screenshot](screenshot.png)
+A visual programming environment inspired by MIT Scratch, built with **React**, **TypeScript**, and **TailwindCSS**.
 
-## Features
+It allows users to drag and drop motion and looks blocks, add multiple sprites, and see them animate — including a **Hero Feature** where sprites swap their logic on collision!
 
-- Drag-and-drop block-based programming
-- Multiple sprite support
-- Motion and looks animations
-- **Hero Feature**: Sprites swap their blocks when they collide!
-- Interactive demo mode
-- Customizable blocks with user input values
+---
 
-## Prerequisites
+## 🚀 Deployed Application
 
-- Node.js (v14 or newer)
+> ⚠️ **Hero Feature Limitation**:  
+> **The Hero Feature does not function on the deployed site.** For a working demonstration, please refer to the **screen recording** provided in the Drive link below.
+>
+> 🔄 A "Hero Feature Demo" button exists in the interface, but due to deployment constraints, it does not function properly and can be ignored.
+
+
+- **🔗 Live App**: [https://scratch-new.vercel.app/](https://scratch-new.vercel.app/)
+- **🎥 Screen Recording**: [Watch on Google Drive](https://drive.google.com/file/d/1vnxQWiaJkErzcg8zp8jnZNv247jlBWD6/view?usp=sharing)
+
+> ⚠️ **Important Note**:  
+> The **Hero Feature (Collision-Based Animation Swap)** might not function as expected in the deployed version due to how `console.log` and internal state reactivity are handled on Vercel.  
+> However, it works perfectly in **local development**, as demonstrated in the screen recording above.
+
+---
+
+## ✨ Features
+
+### 🎯 Motion Animations
+Implemented blocks under the “Motion” category:
+- `Move ___ steps`
+- `Turn ___ degrees`
+- `Go to x: ___ y: ___`
+- `Repeat ___ times` (from Control)
+
+### 🗨️ Looks Animations
+Implemented blocks under the “Looks” category:
+- `Say ___ for ___ seconds`
+- `Think ___ for ___ seconds`
+
+Supports **drag-and-drop** with **editable inputs**, just like the original Scratch environment.
+
+### 🧍 Multiple Sprite Support
+- Add and manage multiple sprites
+- Assign different blocks to each sprite
+- Play all sprite logic at once with the **Play All Sprites** button
+
+### 💥 Hero Feature – Collision-Based Animation Swap
+- When two sprites **collide**, they **swap block logic**
+- Example:
+  - Sprite 1: `Move 50 steps`
+  - Sprite 2: `Move -50 steps`
+  - After collision:
+    - Sprite 1: `Move -50 steps`
+    - Sprite 2: `Move 50 steps`
+- Adds dynamic and interactive logic changes to the playground
+
+---
+
+## 🖼️ Screenshots
+
+### Before Collision
+![Before Collision](Screenshot%202025-05-19%20004426.png)
+
+### After Collision – Hero Feature Activated
+![After Collision](Screenshot%202025-05-19%20004542.png)
+
+---
+
+## 🧪 How to Use
+
+### 🔧 Controls
+- **Add Sprite** – Adds a new sprite to the canvas
+- **Play All Sprites** – Starts all sprites’ animations
+- **Reset All** – Clears all sprites and block logic
+- **Hero Feature Demo** – Auto-runs a collision scenario showing block swap
+
+### 🧱 Working with Blocks
+- Drag blocks from the left panel into any sprite’s workspace
+- Edit block values directly
+- Drag sprites to position them for collision
+- When two sprites collide, their logic swaps dynamically
+
+---
+
+## 🛠️ Installation & Setup
+
+### 📦 Prerequisites
+- [Node.js](https://nodejs.org/) (v14+ recommended)
 - npm or yarn
 
-## Installation
+### 🔍 Steps
 
-Follow these steps to run the project locally:
-
-1. **Clone or download the project**
-
-   If you've downloaded the ZIP file, extract it to a folder of your choice.
-
-2. **Navigate to the project directory**
-
-   \`\`\`bash
+1. **Clone or Download the Repo**
+   ```bash
+   git clone https://github.com/your-username/scratch-clone.git
    cd scratch-clone
-   \`\`\`
+   ```
 
-3. **Install dependencies**
+2. **Install Dependencies**
 
    Using npm:
-   \`\`\`bash
+   ```bash
    npm install --legacy-peer-deps
-   \`\`\`
+   ```
 
-   Or using yarn:
-   \`\`\`bash
+   Or with yarn:
+   ```bash
    yarn install
-   \`\`\`
+   ```
 
-4. **Start the development server**
+3. **Run the App Locally**
 
    Using npm:
-   \`\`\`bash
+   ```bash
    npm start
-   \`\`\`
+   ```
 
-   Or using yarn:
-   \`\`\`bash
+   Or with yarn:
+   ```bash
    yarn start
-   \`\`\`
+   ```
 
-5. **Open the application**
+4. **Open in Browser**
 
-   Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
+   Go to [http://localhost:3000](http://localhost:3000)
 
-## How to Use
+---
 
-### Basic Controls
+## 🗂️ Project Structure
 
-- **Add Sprite**: Click the "Add Sprite" button to add a new sprite to the canvas
-- **Play All Sprites**: Click the "Play" button to run all sprites' blocks simultaneously
-- **Reset All**: Click the "Reset All" button to clear all sprites and blocks
-- **Hero Feature Demo**: Click this button to see a demonstration of sprites swapping blocks when they collide
+```
+scratch-clone/
+├── src/
+│   ├── components/       # React components
+│   ├── types/            # TypeScript types
+│   └── utils/            # Utility functions
+├── public/
+├── package.json
+└── README.md
+```
 
-### Working with Blocks
+---
 
-1. **Add blocks to a sprite**:
-   - Drag blocks from the left panel to a sprite's block area
-   - Click on a block to edit its values
-
-2. **Move sprites**:
-   - Click and drag sprites on the canvas to position them
-   - Sprites will move according to their blocks when you click "Play"
-
-3. **Create collisions**:
-   - Position sprites so they'll collide when moving
-   - When sprites collide, they'll swap their blocks and continue with their new behavior!
-
-## Project Structure
-
-- `src/components/`: React components
-- `src/types/`: TypeScript type definitions
-- `src/utils/`: Utility functions
-
-## Technologies Used
+## 🧰 Technologies Used
 
 - React
 - TypeScript
 - Tailwind CSS
-- React DnD (for drag and drop)
+- React DnD (drag-and-drop)
+- Vite (or Create React App, depending on config)
 
-## License
+---
 
-MIT
+## 📄 License
 
-## Acknowledgements
+This project is open-sourced under the **MIT License**.
 
-Inspired by MIT's Scratch project (https://scratch.mit.edu/)
+---
+
+## 🙌 Acknowledgements
+
+Inspired by [MIT Scratch](https://scratch.mit.edu), an amazing platform for visual programming education.
