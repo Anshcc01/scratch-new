@@ -9,18 +9,12 @@ It allows users to drag and drop motion and looks blocks, add multiple sprites, 
 
 ## 🚀 Deployed Application
 
-> ⚠️ **Hero Feature Limitation**:  
-> **The Hero Feature does not function on the deployed site.** For a working demonstration, please refer to the **screen recording** provided in the Drive link below.
->
 > 🔄 A "Hero Feature Demo" button exists in the interface, but due to deployment constraints, it does not function properly and can be ignored.
 
 
 - **🔗 Live App**: [https://scratch-new.vercel.app/](https://scratch-new.vercel.app/)
 - **🎥 Screen Recording**: [Watch on Google Drive](https://drive.google.com/file/d/1vnxQWiaJkErzcg8zp8jnZNv247jlBWD6/view?usp=sharing)
 
-> ⚠️ **Important Note**:  
-> The **Hero Feature (Collision-Based Animation Swap)** might not function as expected in the deployed version due to how `console.log` and internal state reactivity are handled on Vercel.  
-> However, it works perfectly in **local development**, as demonstrated in the screen recording above.
 
 ---
 
